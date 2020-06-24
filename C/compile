@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -x matrix_mult.exe ]; then
+    rm -rf matrix_mult.exe
+fi
+
+optim_arg=-O3
+
+gcc $optim_arg -std=c99 matrix_mult.c -o matrix_mult.exe -lpthread
+

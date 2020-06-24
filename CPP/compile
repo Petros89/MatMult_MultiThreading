@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ -x matmul.exe ]; then
+    rm -rf matmul.exe
+fi
+
+optim_arg=-O3
+
+g++ $optim_arg -std=c++17 -pthread matmul.cpp -o matmul.exe -lm
+
